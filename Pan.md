@@ -49,13 +49,13 @@
 
 就是 Body的
 
-![1566658580958](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566658580958.png)
+![1566658580958](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566658580958.png?raw=true)
 
 
 
 返回示例
 
-![1566658695476](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566658695476.png)
+![1566658695476](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566658695476.png?raw=true)
 
 ## 用户登录
 
@@ -82,7 +82,7 @@
 
 请求示例
 
-![1566658751889](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566658751889.png)
+![1566658751889](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566658751889.png?raw=true)
 
 返回示例：成功
 
@@ -90,7 +90,7 @@
 
 ​                   失败
 
-![1566658945858](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566658945858.png)
+![1566658945858](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566658945858.png?raw=true)
 
 ## 用户个人信息
 
@@ -115,7 +115,7 @@
 
 请求示例
 
-![1566659890015](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566659890015.png)
+![1566659890015](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566659890015.png?raw=true)
 
 ## 文件上传
 
@@ -141,11 +141,11 @@
 
 请求示例
 
-![1566660005247](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566660005247.png)
+![1566660005247](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566660005247.png?raw=true)
 
 返回示例  成功
 
-![1566660039383](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566660039383.png)
+![1566660039383](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566660039383.png?raw=true)
 
 ## 文件分享
 
@@ -171,7 +171,7 @@
 
 
 
-![1566660169657](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566660169657.png)
+![1566660169657](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566660169657.png?raw=true)
 
 ## 文件下载
 
@@ -209,7 +209,7 @@
 
 - POST
 
-![1566662186888](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662186888.png)
+![1566662186888](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566662186888.png?raw=true)
 
 ## 文件删除
 
@@ -224,7 +224,7 @@
 **请求方式：**
 
 - POST
-- ![1566662371947](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662371947.png)
+- ![1566662371947](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566662371947.png?raw=true)
 
 ## 文件快传
 
@@ -238,39 +238,37 @@
 
 **请求方式：**
 
-![1566662468392](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662468392.png)
+![1566662468392](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566662468392.png?raw=true)
 
 如果没有的话
 
-![1566662490635](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662490635.png)
+![1566662490635](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566662490635.png?raw=true)
 
 
 
 ### 表的设计
 
-![1566662583876](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662583876.png)
+![1566662583876](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566662583876.png?raw=true)
 
 具体的创表文件在项目目录下
 
-![1566662623933](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662623933.png)
+
 
 ### 文件的加密处理
 
 主要就是把上传的文件变成一个文件元的结构体，进行sha1的加密
 
-![1566662686353](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662686353.png)
+![1566662686353](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566662686353.png?raw=true)
 
 ### 统一鉴权和Token的处理
 
 使用MD5加密
 
-![1566662737145](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662737145.png)
-
-![1566662751748](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662751748.png)
+![1566662737145](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566662737145.png?raw=true)
 
 统一鉴权拦截
 
-![1566662801068](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662801068.png)
+![1566662801068](https://github.com/Stark-wmf/awesomePan/blob/master/static/1566662801068.png?raw=true)
 
 ![1566662822640](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566662822640.png)
 
@@ -294,3 +292,12 @@ mysql的docker镜像直接pull能跑，但也没有装进我的项目里去
 
 昨天已经熬夜挺晚了，今天不想熬夜太晚了，争取把Docker弄好睡觉
 
+### 很晚的最后
+
+死在了docker build 成功后的 docker run
+
+`root@iZwz9fbrqggvkcys11gxyiZ:/awesomepan# docker run -p 8088:8088 awesomepan
+container_linux.go:247: starting container process caused "exec: \"./awesomepan\": stat ./awesomepan: no such file or directory"
+docker: Error response from daemon: oci runtime error: container_linux.go:247: starting container process caused "exec: \"./awesomepan\": stat ./awesomepan: no such file or directory".`
+
+再熬下去感觉自己精神要不好了。明天准备面试
