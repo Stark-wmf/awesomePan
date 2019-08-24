@@ -14,10 +14,10 @@ const (
 )
 
 //处理用户注册请求
-func SignupHandler(w http.ResponseWriter,r*http.Request){
-	if r.Method==http.MethodGet{
-		data,err:=ioutil.ReadFile("./static/view/signup.html")
-		if err!=nil{
+func SignupHandler(w http.ResponseWriter,r*http.Request) {
+	if r.Method == http.MethodGet {
+		data, err := ioutil.ReadFile("./static/view/signup.html")
+		if err != nil {
 			w.WriteHeader(http.StatusInternalServerError)
 			return
 		}
@@ -25,19 +25,20 @@ func SignupHandler(w http.ResponseWriter,r*http.Request){
 		return
 	}
 	r.ParseForm()
-	username:=r.Form.Get("username")
-	password:=r.Form.Get("password")
+	username := r.Form.Get("username")
+	password := r.Form.Get("password")
 
-	if len(username)<3||len(password)<5{
+	if len(username) < 3 || len(password) < 5 {
 		w.Write([]byte("Invalid parameter"))
 		return
 	}
-	enc_passwd:=util.Sha1([]byte(password+pwd_slat))
-	suc:=dblayer.UserSignup(username,enc_passwd)
-	if suc{
+	enc_passwd := util.Sha1([]byte(password + pwd_slat))
+	suc := dblayer.UserSignup(username, enc_passwd)
+	if suc {
 		w.Write([]byte("Sucess"))
+	} else {
+		w.Write([]byte("Fail"))
 	}
-	w.Write([]byte("Fail"))
 }
 //登录接口
 func SigninHandler(w http.ResponseWriter,r*http.Request) {
@@ -93,6 +94,7 @@ func UserInfoHandler(w http.ResponseWriter,r*http.Request) {
 //3.查询用户信息
 user,err:=dblayer.GetUserInfo(username)
 if err!=nil{
+	fmt.Println(err.Error())
 	w.WriteHeader(http.StatusForbidden)
 	return
 }
@@ -112,10 +114,11 @@ func GenToken(username string)string{
 }
 
 func IsTokenValid(token string)bool{
-	//1.判断token是否过期
+	//1.判断token是否过期，这里节省时间先简单判断
      if len(token)!=40{
      	return false
 	 }
+     //TO DO
 	//2.查数据库是否有这个token
 
 	//3.对比两个token是否一致

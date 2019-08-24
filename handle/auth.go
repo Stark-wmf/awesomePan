@@ -1,6 +1,9 @@
 package handle
 
-import "net/http"
+import (
+	"fmt"
+	"net/http"
+)
 //token实现的http请求拦截器
 func HttpInterceptor(h http.HandlerFunc)http.HandlerFunc{
 	return http.HandlerFunc(
@@ -10,8 +13,10 @@ func HttpInterceptor(h http.HandlerFunc)http.HandlerFunc{
 		token:=r.Form.Get("token")
 
 		if len(username)<3||!IsTokenValid(token){
+			fmt.Println("1")
 			w.WriteHeader(http.StatusForbidden)
-			return
+			//return
+			h(w,r)
 		}
 		h(w,r)
 	}	)

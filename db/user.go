@@ -82,13 +82,14 @@ func GetUserInfo(username string)(User,error){
    stmt,err:=mydb.DBConn().Prepare(
    	"select user_name,signup_at from tbl_user where user_name=? limit 1")
    if err!=nil{
-   	fmt.Println(err.Error())
+   	fmt.Println(err.Error()+"1")
    	return user,err
    }
    defer stmt.Close()
 
    err=stmt.QueryRow(username).Scan(&user.Username,&user.SignupAt)
    if err!=nil{
+   	fmt.Println(err.Error()+"2")
    	return user,err
    }
    return user,nil

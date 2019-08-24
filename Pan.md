@@ -47,6 +47,8 @@
 
 请求示例
 
+就是 Body的
+
 ![1566658580958](C:\Users\win10\AppData\Roaming\Typora\typora-user-images\1566658580958.png)
 
 
