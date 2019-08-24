@@ -2,8 +2,8 @@ FROM golang:latest
 
 WORKDIR $GOPATH/src/awesomePan
 COPY . $GOPATH/src/awesomePan
-RUN go install github.com/go-sql-driver/mysql
-RUN go build .
+
+RUN go build main.go
 
 EXPOSE 8080
 ENTRYPOINT ["./awesomepan"]
