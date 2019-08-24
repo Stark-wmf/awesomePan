@@ -5,4 +5,4 @@ COPY . $GOPATH/src/awesomePan
 RUN go build .
 
 EXPOSE 8080
-ENTRYPOINT ["./awesomePan"]
+ENTRYPOINT ["./awesomepan"]
